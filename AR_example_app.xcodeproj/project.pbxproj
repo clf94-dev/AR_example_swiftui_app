@@ -11,6 +11,8 @@
 		32CA54342A98683B005763CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA54332A98683B005763CC /* ContentView.swift */; };
 		32CA54362A98683F005763CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA54352A98683F005763CC /* Assets.xcassets */; };
 		32CA54392A98683F005763CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA54382A98683F005763CC /* Preview Assets.xcassets */; };
+		32CA54412A986925005763CC /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA54402A986925005763CC /* CustomARView.swift */; };
+		32CA54432A986A19005763CC /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA54422A986A19005763CC /* CustomARViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		32CA54332A98683B005763CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		32CA54352A98683F005763CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32CA54382A98683F005763CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		32CA54402A986925005763CC /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		32CA54422A986A19005763CC /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,8 @@
 		32CA54302A98683B005763CC /* AR_example_app */ = {
 			isa = PBXGroup;
 			children = (
+				32CA543F2A9868FD005763CC /* Feature Targets */,
 				32CA54312A98683B005763CC /* AR_example_appApp.swift */,
-				32CA54332A98683B005763CC /* ContentView.swift */,
 				32CA54352A98683F005763CC /* Assets.xcassets */,
 				32CA54372A98683F005763CC /* Preview Content */,
 			);
@@ -65,6 +69,16 @@
 				32CA54382A98683F005763CC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32CA543F2A9868FD005763CC /* Feature Targets */ = {
+			isa = PBXGroup;
+			children = (
+				32CA54332A98683B005763CC /* ContentView.swift */,
+				32CA54402A986925005763CC /* CustomARView.swift */,
+				32CA54422A986A19005763CC /* CustomARViewRepresentable.swift */,
+			);
+			path = "Feature Targets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CA54342A98683B005763CC /* ContentView.swift in Sources */,
+				32CA54412A986925005763CC /* CustomARView.swift in Sources */,
 				32CA54322A98683B005763CC /* AR_example_appApp.swift in Sources */,
+				32CA54432A986A19005763CC /* CustomARViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +291,7 @@
 				DEVELOPMENT_TEAM = YUBAHJ7MY9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to show AR View";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +321,7 @@
 				DEVELOPMENT_TEAM = YUBAHJ7MY9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to show AR View";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
