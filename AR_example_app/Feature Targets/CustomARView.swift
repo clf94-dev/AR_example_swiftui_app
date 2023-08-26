@@ -23,6 +23,7 @@ class CustomARView: ARView {
     }
     
     private var cancellables: Set<AnyCancellable> = []
+    // private var camera: CameraModel.Scene? = nil
     func subscribeToActionStream() {
         ARManager
             .shared
@@ -32,7 +33,24 @@ class CustomARView: ARView {
                     case .placeBlock(let color):
                         self?.placeBlock(ofColor: color)
                     case .removeAllAnchors:
-                    self?.scene.anchors.removeAll()
+                        self?.scene.anchors.removeAll()
+                case .placeCamera:
+                    do {
+                        // let camera = try CameraModel.loadScene()
+                        let camera = try? Entity.load(named: "CameraModel")
+                        guard let cameraItem = camera else{
+                            return
+                        }
+                        let anchor = AnchorEntity(world: .zero)
+                        anchor.addChild(cameraItem)
+                    
+                        self?.scene.addAnchor(anchor)
+                        // cameraItem.transform.translation = [0, 0,-0.6]
+                        // self?.camera = camera
+                    } catch {
+                        print(error)
+                    }
+                    
                 }
             }
             .store(in: &cancellables)
@@ -40,6 +58,7 @@ class CustomARView: ARView {
     func configurationExamples() {
         // Tracks the device relative to it's environment
         let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
         session.run(configuration)
         
         // Not supported in all regions, tracks w.r.t. global coordinates
@@ -87,12 +106,15 @@ class CustomARView: ARView {
     }
     
     func placeBlock(ofColor color: Color) {
-        let block = MeshResource.generateBox(size: 1)
+        let block = MeshResource.generateBox(size: 0.1)
         let material = SimpleMaterial(color: UIColor(color), isMetallic: false)
         let entity = ModelEntity(mesh: block, materials: [material])
         
-        let anchor = AnchorEntity(world: .random(in: 1...5))
+        let anchor = AnchorEntity(world: .zero)
         anchor.addChild(entity)
         scene.addAnchor(anchor)
+        
+        
+        // entity.transform.translation = [0, 0,-1]
     }
 }

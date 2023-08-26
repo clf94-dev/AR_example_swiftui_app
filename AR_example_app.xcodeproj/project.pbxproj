@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		326675BC2A99207800ACBD9F /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326675BB2A99207800ACBD9F /* ARAction.swift */; };
 		326675BE2A9920BC00ACBD9F /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326675BD2A9920BC00ACBD9F /* ARManager.swift */; };
+		326675C02A99C51000ACBD9F /* CameraModel.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 326675BF2A99C51000ACBD9F /* CameraModel.usdz */; };
 		32CA54322A98683B005763CC /* AR_example_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA54312A98683B005763CC /* AR_example_appApp.swift */; };
 		32CA54342A98683B005763CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CA54332A98683B005763CC /* ContentView.swift */; };
 		32CA54362A98683F005763CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CA54352A98683F005763CC /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		326675BB2A99207800ACBD9F /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
 		326675BD2A9920BC00ACBD9F /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
+		326675BF2A99C51000ACBD9F /* CameraModel.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = CameraModel.usdz; sourceTree = "<group>"; };
 		32CA542E2A98683B005763CC /* AR_example_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_example_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CA54312A98683B005763CC /* AR_example_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_example_appApp.swift; sourceTree = "<group>"; };
 		32CA54332A98683B005763CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				32CA543F2A9868FD005763CC /* Feature Targets */,
 				32CA54312A98683B005763CC /* AR_example_appApp.swift */,
 				32CA54352A98683F005763CC /* Assets.xcassets */,
+				326675BF2A99C51000ACBD9F /* CameraModel.usdz */,
 				32CA54372A98683F005763CC /* Preview Content */,
 			);
 			path = AR_example_app;
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CA54392A98683F005763CC /* Preview Assets.xcassets in Resources */,
+				326675C02A99C51000ACBD9F /* CameraModel.usdz in Resources */,
 				32CA54362A98683F005763CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

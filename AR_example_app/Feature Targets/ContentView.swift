@@ -15,6 +15,9 @@ struct ContentView: View {
             .overlay (alignment: .bottom) {
                 ScrollView(.horizontal){
                     HStack{
+                        Button("Place") {
+                            ARManager.shared.actionStream.send(.placeCamera)
+                        }
                         Button{
                             ARManager.shared.actionStream.send(.removeAllAnchors)
                         } label: {
